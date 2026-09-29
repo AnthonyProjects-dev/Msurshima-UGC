@@ -64,7 +64,12 @@ hr { border: 0; border-top: 1px solid var(--line); margin: 48px 0; }
 .stack { list-style: none; padding: 0; margin: 0; display: grid; gap: 22px; }
 .stack li { display: flex; gap: 16px; align-items: center; }
 .stack li p { margin: 0; }
-.stack-icon { width: 44px; height: 44px; border-radius: 12px; background: var(--c, #333); flex: none; opacity: .9; }
+.stack-icon { width: 44px; height: 44px; border-radius: 11px; background: #222; flex: none; object-fit: cover; }
+
+.brands { list-style: none; padding: 0; margin: 20px 0 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+.brands li { background: #1a1a1a; border: 1px solid var(--line); border-radius: 12px; height: 72px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; padding: 16px 18px; overflow: hidden; }
+.brands img { width: auto; height: 100%; max-width: 100%; max-height: 100%; object-fit: contain; filter: brightness(0) invert(1); opacity: .85; transition: opacity .15s ease; }
+.brands li:hover img { opacity: 1; }
 
 .xp { margin-bottom: 22px; }
 .xp h3 { margin-bottom: 6px; }
