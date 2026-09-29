@@ -8,7 +8,8 @@ A dependency-free rebuild of the Framer site at https://msurshimaugc.framer.webs
 - `js/data.js` — the video list. Add, remove or re-order videos here. Each entry needs `id` (the TikTok video id), `category` (`skincare`, `fashion`, `beauty` or `lifestyle`) and `title`. Set `featured: true` to pin it to the top of its section.
 - `js/app.js` — renders the sections, handles the filter pills, and opens the official TikTok embed (`tiktok.com/embed/v2/<id>`) in a modal when a card is clicked.
 - `assets/thumbs/<id>.jpg` — one cover image per video, pulled from TikTok on 2026-09-29 and downscaled to 720px. When you add a video to `data.js`, drop its cover here with the same id (or run `scripts/fetch-thumbs.py`).
-- `assets/avatar.jpg` — **missing, add it.** Drop a square profile photo here. Until then the slot shows a dark gradient.
+- `assets/avatar.jpg` — square profile photo (640px).
+- `assets/logos/` — `tool-*.png` are the official App Store icons for the six tools in the Stack section; `brand-*` are the brands' own logo files (wordmarks from Wikimedia Commons or the brand's site), rendered white on dark via a CSS filter in the Brands section. To add a brand, drop a transparent-background logo here and add an `<li>` in `index.html`.
 
 ## Run locally
 Any static server works, for example:
@@ -27,8 +28,10 @@ Drag the `site` folder into Netlify Drop, or push it to GitHub and enable Pages,
 - First-time visitors in the EU see TikTok's cookie prompt inside the player. That is TikTok's, not ours, and cannot be suppressed.
 - Framer's original site used `tiktok.com/player/v1/`, which is what was showing "Access Denied". `embed/v2` is the supported public embed.
 
+## Custom domain
+GitHub Pages supports a custom domain. After buying one (e.g. msurshimaugc.com), add a file named `CNAME` at the repo root containing just the domain, then at the registrar add four A records for the apex pointing to 185.199.108.153, 185.199.109.153, 185.199.110.153 and 185.199.111.153, and a CNAME record for `www` pointing to `anthonyprojects-dev.github.io`. Then tick "Enforce HTTPS" in the repo's Pages settings once the certificate is issued.
+
 ## To-do before going live
-- Add `assets/avatar.jpg`.
 - Confirm the contact email and Instagram link in the footer of `index.html` (Instagram currently points to instagram.com).
 - Replace the two placeholder testimonials with real quotes, or delete that section.
 - Swap in real stats under "About me" if 30+ brands / 150+ videos are not accurate.
