@@ -2,6 +2,8 @@
 
 A dependency-free rebuild of the Framer site at https://msurshimaugc.framer.website/ so it can be edited and deployed without Framer credits.
 
+Live: https://msurshimanzouke.github.io/ (GitHub Pages, org site `msurshimanzouke/msurshimanzouke.github.io`). Resume: https://msurshimanzouke.github.io/resume/ (HTML + PDF). Outreach template: `outreach/email-template.md`.
+
 ## Files
 - `index.html` — page structure and all copy (left column: profile, about, services, stack, experience, testimonials, contact).
 - `css/styles.css` — dark theme, Switzer font (loaded from Fontshare), sticky sidebar, two-column 9:16 video grid.
@@ -29,7 +31,7 @@ Drag the `site` folder into Netlify Drop, or push it to GitHub and enable Pages,
 - Framer's original site used `tiktok.com/player/v1/`, which is what was showing "Access Denied". `embed/v2` is the supported public embed.
 
 ## Custom domain
-GitHub Pages supports a custom domain. After buying one (e.g. msurshimaugc.com), add a file named `CNAME` at the repo root containing just the domain, then at the registrar add four A records for the apex pointing to 185.199.108.153, 185.199.109.153, 185.199.110.153 and 185.199.111.153, and a CNAME record for `www` pointing to `anthonyprojects-dev.github.io`. Then tick "Enforce HTTPS" in the repo's Pages settings once the certificate is issued.
+GitHub Pages supports a custom domain. After buying one (e.g. msurshimaugc.com), add a file named `CNAME` at the repo root containing just the domain, then at the registrar add four A records for the apex pointing to 185.199.108.153, 185.199.109.153, 185.199.110.153 and 185.199.111.153, and a CNAME record for `www` pointing to `msurshimanzouke.github.io`. Then tick "Enforce HTTPS" in the repo's Pages settings once the certificate is issued.
 
 ## To-do before going live
 - Confirm the contact email and Instagram link in the footer of `index.html` (Instagram currently points to instagram.com).
