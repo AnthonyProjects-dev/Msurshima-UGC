@@ -7,7 +7,7 @@ Live: https://msurshimanzouke.github.io/ (GitHub Pages, org site `msurshimanzouk
 ## Files
 - `index.html` — page structure and all copy (left column: profile, about, services, stack, experience, testimonials, contact).
 - `css/styles.css` — dark theme, Switzer font (loaded from Fontshare), sticky sidebar, two-column 9:16 video grid.
-- `js/data.js` — the video list. Add, remove or re-order videos here. Each entry needs `id` (the TikTok video id), `category` (`skincare`, `fashion`, `beauty` or `lifestyle`) and `title`. Set `featured: true` to pin it to the top of its section.
+- `js/data.js` — the video list. Add, remove or re-order videos here. Each entry needs `id` (the TikTok video id), `category` (`skincare`, `fashion`, `beauty`, `fitness` or `lifestyle`) and `title`. Set `featured: true` to pin it to the top of its section.
 - `js/app.js` — renders the sections, handles the filter pills, and opens the official TikTok embed (`tiktok.com/embed/v2/<id>`) in a modal when a card is clicked.
 - `assets/thumbs/<id>.jpg` — one cover image per video, pulled from TikTok on 2026-09-29 and downscaled to 720px. When you add a video to `data.js`, drop its cover here with the same id (or run `scripts/fetch-thumbs.py`).
 - `assets/avatar.jpg` — square profile photo (640px).
