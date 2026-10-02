@@ -4,6 +4,7 @@
     { key: "skincare", label: "Skincare" },
     { key: "fashion", label: "Fashion" },
     { key: "beauty", label: "Beauty" },
+    { key: "fitness", label: "Fitness & Health" },
     { key: "lifestyle", label: "Lifestyle" }
   ];
   const videoUrl = id => `https://www.tiktok.com/@${handle}/video/${id}`;
@@ -13,7 +14,7 @@
   CATEGORIES.forEach(cat => {
     const list = videos
       .filter(v => v.category === cat.key)
-      .sort((a, b) => (b.featured ? 1 : 0) - (a.featured ? 1 : 0));
+      .sort((a, b) => (b.views || 0) - (a.views || 0) || (b.featured ? 1 : 0) - (a.featured ? 1 : 0));
     if (!list.length) return;
     const section = document.createElement("section");
     section.className = "section";
